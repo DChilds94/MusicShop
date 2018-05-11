@@ -22,7 +22,7 @@ public class ShopTest {
     @Before
     public void before() {
         bassGuitar = new BassGuitar("Hofner", "HCT5001 Voilin Bass", 560.00, 450.00, "String", "Oak", 4);
-        amp = new Amp("Ampeg", "V4-B Head", 850.00, 600, 100);
+        amp = new Amp("Ampeg", "V4-B Head", 850.00, 600.00, 100);
         shop = new Shop("Upul's Love Songs");
     }
 
@@ -34,5 +34,14 @@ public class ShopTest {
     public void canAddItemToStock(){
         shop.addStock(bassGuitar);
         assertEquals(1, shop.countStock());
+    }
+
+    @Test
+    public void canGetTotalMarkUpOfStock(){
+        shop.addStock(amp);
+        shop.addStock(amp);
+
+
+        assertEquals(500.00, shop.calculateTotalMarkUp(),0.1);
     }
 }
