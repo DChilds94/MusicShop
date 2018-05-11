@@ -1,6 +1,7 @@
 package shop;
 
 import instruments.Tuba;
+import items.Amp;
 import items.Items;
 import items.Sellable;
 
@@ -24,6 +25,12 @@ public class Shop {
     public int countStock(){
         return this.stock.size();
     }
+//    public void removeStock(){
+//        this.stock.remove();
+//    }
+    public void clearStock(){
+        this.stock.clear();
+    }
 
 //here I want to loop through the ArrayList of sellable items and then get the markUp of that item and add it to the totalMarkUp.
     public double calculateTotalMarkUp(){
@@ -34,4 +41,8 @@ public class Shop {
         }
         return totalMarkUp;
  }
+
+    public void remove(Sellable sellable) {
+        this.stock.remove(sellable);
+    }
 }

@@ -43,4 +43,17 @@ public class ShopTest {
 
         assertEquals(500.00, shop.calculateTotalMarkUp(),0.1);
     }
+    @Test
+    public void canClearItemsFromStock(){
+        shop.addStock(amp);
+        shop.clearStock();
+        assertEquals(0, shop.countStock());
+    }
+    @Test
+    public void canRemoveAmpFromStock(){
+        shop.addStock(amp);
+        shop.addStock(bassGuitar);
+        shop.remove(amp);
+        assertEquals(1, shop.countStock());
+    }
 }
