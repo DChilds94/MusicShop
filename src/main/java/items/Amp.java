@@ -6,14 +6,11 @@ public class Amp extends Items {
 
     public Amp(String make, String model, double retailPrice, double unitCost, int power) {
         super(make, model, retailPrice, unitCost);
-        power = power;
+        this.power = power;
     }
 
     public int getPower() {
         return power;
     }
 
-    public double calculateMarkUp(){
-        return getRetailPrice() - getUnitCost();
-    }
 }

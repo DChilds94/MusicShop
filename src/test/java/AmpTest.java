@@ -31,6 +31,10 @@ public class AmpTest {
         assertEquals(600.00, amp.getUnitCost(), 0.1);
     }
     @Test
+    public void canGetPower(){
+        assertEquals(100, amp.getPower());
+    }
+    @Test
     public void canCalculateMarkUp(){
         assertEquals(250.00, amp.calculateMarkUp(), 0.1);
     }
