@@ -41,7 +41,6 @@ public class ShopTest {
         shop.addStock(amp);
         shop.addStock(amp);
 
-
         assertEquals(500.00, shop.calculateTotalMarkUp(),0.1);
     }
 }

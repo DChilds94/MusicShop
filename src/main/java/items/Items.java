@@ -30,7 +30,7 @@ public  abstract class Items implements Sellable {
     }
 
     public final double calculateMarkUp(){
-        return retailPrice -= unitCost;
+        return retailPrice - unitCost;
     }
 
 
