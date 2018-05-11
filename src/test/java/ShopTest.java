@@ -9,6 +9,7 @@ import shop.Shop;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class ShopTest {
 
@@ -28,5 +29,10 @@ public class ShopTest {
     @Test
     public void canGetName() {
         assertEquals("Upul's Love Songs", shop.getName());
+    }
+    @Test
+    public void canAddItemToStock(){
+        shop.addStock(bassGuitar);
+        assertEquals(1, shop.countStock());
     }
 }
