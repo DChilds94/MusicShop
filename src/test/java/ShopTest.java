@@ -56,4 +56,13 @@ public class ShopTest {
         shop.remove(amp);
         assertEquals(1, shop.countStock());
     }
+    @Test
+    public void canRemoveTwoAmpsFromStock(){
+        shop.addStock(amp);
+        shop.addStock(amp);
+        shop.addStock(bassGuitar);
+        shop.remove(amp);
+        shop.remove(amp);
+        assertEquals(1, shop.countStock());
+    }
 }
